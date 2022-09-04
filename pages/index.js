@@ -39,7 +39,7 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     "& svg": {
       float: "left",
       fontSize: "30px",
-      marginRight: "8px",
+      marginRight: "7px",
     },
   },
   ".Mui-selected": {
