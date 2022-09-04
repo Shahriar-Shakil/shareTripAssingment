@@ -20,5 +20,8 @@ export const useTypography = makeStyles((theme) => {
     fontWeight700: {
       fontWeight: 700,
     },
+    fontWeight600: {
+      fontWeight: 600,
+    },
   };
 });

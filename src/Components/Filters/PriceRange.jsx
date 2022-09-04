@@ -1,29 +1,7 @@
 import { Box, Divider, Slider, Typography } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
-
-const useTypography = makeStyles((theme) => {
-  return {
-    titleSm: {
-      fontSize: "14px",
-      fontWeight: "500",
-      lineHight: "20.02px",
-    },
-    titleLg: {
-      fontSize: (props) => (props.fontSize ? props.fontSize : "14px"),
-      fontWeight: "500",
-      lineHight: "20.02px",
-    },
-    titleXs: {
-      fontSize: "12px",
-      fontWeight: "400",
-      lineHight: "18px",
-    },
-    fontWeight700: {
-      fontWeight: 700,
-    },
-  };
-});
+import { useTypography } from "../../stylesHook/stylesHook";
 
 export default function PriceRange() {
   const classes = useTypography({ fontSize: "16px" });
@@ -34,21 +12,21 @@ export default function PriceRange() {
   };
   return (
     <Box sx={{ py: 2 }}>
-      <p className={classes.titleLg}>Price Range</p>
+      <Typography className={classes.titleLg}>Price Range</Typography>
       <Divider light sx={{ mt: 1 }} />
       <Box sx={{ py: 2 }}>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <div>
-            <p className={classes.titleXs}>Minimum Price</p>
-            <p className={(classes.titleLg, classes.fontWeight700)}>
+            <Typography className={classes.titleXs}>Minimum Price</Typography>
+            <Typography className={(classes.titleLg, classes.fontWeight700)}>
               {value?.[0]}
-            </p>
+            </Typography>
           </div>
           <div>
-            <p className={classes.titleXs}>Maximum Price</p>
-            <p className={(classes.titleLg, classes.fontWeight700)}>
+            <Typography className={classes.titleXs}>Maximum Price</Typography>
+            <Typography className={(classes.titleLg, classes.fontWeight700)}>
               {value?.[1]}
-            </p>
+            </Typography>
           </div>
         </Box>
 

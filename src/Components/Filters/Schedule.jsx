@@ -36,7 +36,7 @@ export default function Schedule() {
       </Typography>
       <Divider light sx={{ mt: 1 }} />
       <Box sx={{ mt: 3 }}>
-        <p className={classes.titleXs}>Departure Time</p>
+        <Typography className={classes.titleXs}>Departure Time</Typography>
         <List divider sx={{ width: "100%", maxWidth: 360 }}>
           {schedules.map((value) => {
             const labelId = `checkbox-list-label-${value}`;
@@ -68,7 +68,11 @@ export default function Schedule() {
                   </ListItemIcon>
                   <ListItemText
                     id={labelId}
-                    primary={<p className={classes.titleLg}>{value}</p>}
+                    primary={
+                      <Typography className={classes.titleLg}>
+                        {value}
+                      </Typography>
+                    }
                   />
                 </ListItemButton>
               </ListItem>
