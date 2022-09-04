@@ -1,13 +1,11 @@
 import {
   Box,
+  Checkbox,
   Divider,
-  Typography,
   List,
   ListItem,
-  IconButton,
   ListItemButton,
   ListItemIcon,
-  Checkbox,
   ListItemText,
 } from "@mui/material";
 import React from "react";
@@ -32,14 +30,10 @@ export default function Schedule() {
   };
   return (
     <Box sx={{ py: 2 }}>
-      <Typography className={classes.titleLg} component="p">
-        Schedule
-      </Typography>
+      <p className={classes.titleLg}>Schedule</p>
       <Divider light sx={{ mt: 1 }} />
       <Box sx={{ mt: 3 }}>
-        <Typography className={classes.titleXs} component="p">
-          Departure Time
-        </Typography>
+        <p className={classes.titleXs}>Departure Time</p>
         <List divider sx={{ width: "100%", maxWidth: 360 }}>
           {schedules.map((value) => {
             const labelId = `checkbox-list-label-${value}`;
@@ -71,11 +65,7 @@ export default function Schedule() {
                   </ListItemIcon>
                   <ListItemText
                     id={labelId}
-                    primary={
-                      <Typography className={classes.titleLg}>
-                        {value}
-                      </Typography>
-                    }
+                    primary={<p className={classes.titleLg}>{value}</p>}
                   />
                 </ListItemButton>
               </ListItem>

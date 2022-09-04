@@ -10,33 +10,21 @@ export default function PriceRange() {
   };
   return (
     <Box sx={{ py: 2 }}>
-      <Typography className={classes.titleLg} component="p">
-        Price Range
-      </Typography>
+      <p className={classes.titleLg}>Price Range</p>
       <Divider light sx={{ mt: 1 }} />
       <Box sx={{ py: 2 }}>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <div>
-            <Typography className={classes.titleXs} component="p">
-              Minimum Price
-            </Typography>
-            <Typography
-              className={(classes.titleLg, classes.fontWeight700)}
-              component="p"
-            >
+            <p className={classes.titleXs}>Minimum Price</p>
+            <p className={(classes.titleLg, classes.fontWeight700)}>
               {value?.[0]}
-            </Typography>
+            </p>
           </div>
           <div>
-            <Typography className={classes.titleXs} component="p">
-              Maximum Price
-            </Typography>
-            <Typography
-              className={(classes.titleLg, classes.fontWeight700)}
-              component="p"
-            >
+            <p className={classes.titleXs}>Maximum Price</p>
+            <p className={(classes.titleLg, classes.fontWeight700)}>
               {value?.[1]}
-            </Typography>
+            </p>
           </div>
         </Box>
 
