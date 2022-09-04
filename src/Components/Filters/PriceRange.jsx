@@ -1,10 +1,34 @@
 import { Box, Divider, Slider, Typography } from "@mui/material";
 import React from "react";
-import { useTypography } from "../../stylesHook/stylesHook";
+import { makeStyles } from "@mui/styles";
+
+const useTypography = makeStyles((theme) => {
+  return {
+    titleSm: {
+      fontSize: "14px",
+      fontWeight: "500",
+      lineHight: "20.02px",
+    },
+    titleLg: {
+      fontSize: (props) => (props.fontSize ? props.fontSize : "14px"),
+      fontWeight: "500",
+      lineHight: "20.02px",
+    },
+    titleXs: {
+      fontSize: "12px",
+      fontWeight: "400",
+      lineHight: "18px",
+    },
+    fontWeight700: {
+      fontWeight: 700,
+    },
+  };
+});
+
 export default function PriceRange() {
   const classes = useTypography({ fontSize: "16px" });
   const [value, setValue] = React.useState([500, 6000]);
-
+  // console.log(classes);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

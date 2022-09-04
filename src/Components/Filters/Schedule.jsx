@@ -7,6 +7,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import { useTypography } from "../../stylesHook/stylesHook";
@@ -30,7 +31,9 @@ export default function Schedule() {
   };
   return (
     <Box sx={{ py: 2 }}>
-      <p className={classes.titleLg}>Schedule</p>
+      <Typography variant="body1" component="p" className={classes.titleLg}>
+        Schedule
+      </Typography>
       <Divider light sx={{ mt: 1 }} />
       <Box sx={{ mt: 3 }}>
         <p className={classes.titleXs}>Departure Time</p>
