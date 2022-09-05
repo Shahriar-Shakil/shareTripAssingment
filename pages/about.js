@@ -25,17 +25,7 @@ export default function Index() {
   return (
     <Layout>
       <Container style={{ paddingTop: "14px" }} maxWidth="lg">
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item lg={3}>
-            <Sidebar />
-          </Grid>
-          <Grid item lg={9}>
-            <Stack spacing={2}>
-              <TripCategories />
-              <TicketsUI />
-            </Stack>
-          </Grid>
-        </Grid>
+        about page
       </Container>
     </Layout>
   );
