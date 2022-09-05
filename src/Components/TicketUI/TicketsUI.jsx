@@ -1,34 +1,24 @@
-import React from "react";
 import {
   Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Typography,
-  ToggleButtonGroup,
-  ToggleButton,
-  styled,
-  Stack,
-  FormControlLabel,
-  InputLabel,
-  Select,
-  MenuItem,
   FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Stack,
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import React from "react";
 
-import { makeStyles } from "@mui/styles";
 import BoxUI from "../UI/BoxUI";
-import { useTypography } from "../../stylesHook/stylesHook";
-import TicketBody from "./TicketBody";
+import BottomLeft from "./BottomLeft";
 import SeatsStatus from "./SeatsStatus";
-import Link from "next/link";
+import TicketBody from "./TicketBody";
 import UpperLeft from "./UpperLeft";
 
 export default function TicketsUI() {
   return (
     <BoxUI light={true}>
-      <Stack spacing={2}>
+      <Stack>
         <Grid container>
           <Grid item lg={9}>
             <Box sx={{ px: 3, py: 2 }}>
@@ -43,10 +33,10 @@ export default function TicketsUI() {
             <UpperLeft />
           </Grid>
         </Grid>
-        <Grid container>
+        <Grid sx={{ pt: 2 }} container>
           <Grid item lg={9}>
             <Box sx={{ px: 3 }}>
-              <Box sx={{}}>
+              <Box>
                 <Grid container columnSpacing={2}>
                   <Grid item lg={6}>
                     <FormControl fullWidth>
@@ -89,8 +79,12 @@ export default function TicketsUI() {
               </Box>
             </Box>
           </Grid>
-          <Grid item lg={3}>
-            <Box></Box>
+          <Grid
+            item
+            lg={3}
+            sx={{ borderLeft: "1px solid #E0E0E1", mt: -2, pt: 2 }}
+          >
+            <BottomLeft />
           </Grid>
         </Grid>
       </Stack>
