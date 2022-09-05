@@ -45,6 +45,9 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
       backgroundColor: "rgb(21, 101, 192) !important",
     },
   },
+  ".iconImage": {
+    marginRight: "8px",
+  },
 }));
 export default function TripCategories() {
   const classes = useTypography({ fontSize: "16px" });
@@ -68,7 +71,7 @@ export default function TripCategories() {
           color="primary"
         >
           <ToggleButton value="1">
-            <DiamondIcon />
+            <img className="iconImage" src={"/icons/diamond.png"} />
             Earliest Buses
           </ToggleButton>
           <ToggleButton value="2">
